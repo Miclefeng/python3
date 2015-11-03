@@ -24,7 +24,7 @@ if request == 'p': key = 'phone'
 if request == 'a': key = 'addr'
 
 person = people.get(name,{})
-# get(key,key) 提供默认值
+# get(key,key) second params提供默认值
 label = labels.get(key,key)
 result = person.get(key,'not avaliable')
 print("%s's %s is %s." % (name,label,result))
