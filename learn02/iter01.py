@@ -1,0 +1,6 @@
+# iter __next__()
+f = open('fibs.py')
+print(f.__next__())
+print(f.__next__())
+print(next(f))
+print(next(f))
