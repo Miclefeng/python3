@@ -1,5 +1,6 @@
 # classtree.py
 
+# B().__class__.__bases__ goto parent object
 def classtree(cls,indent):
 	print('.' * indent + cls.__name__)
 	for supercls in cls.__bases__:
