@@ -13,7 +13,7 @@ print(x._age)
 x.job = 'trainer'
 print(x.job)
 
-print('-----------------------------')
+print('-'*20)
 
 class Classic:
 	def __getattr__(self,name):
