@@ -14,6 +14,10 @@ print(text.ljust(20,'*'))	# hello world*********
 print(text.rjust(20,'*'))	# *********hello world
 print(text.center(20,'*'))	# ****hello world*****
 
+print(format(text,"+>20s"))
+print(format(text,"+<20s"))
+print(format(text,"+^20s"))
+
 
 
 
