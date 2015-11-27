@@ -17,3 +17,5 @@ print(min_price,max_price)
 minp = min(prices,key=lambda k:prices[k])
 maxp = max(prices,key=lambda k:prices[k])
 print(minp,maxp)
+# fb aapl
+
