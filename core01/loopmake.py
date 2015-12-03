@@ -3,17 +3,17 @@
 dashes = '\n' + '-' * 50 # dashed line
 exec_dict = {
 	'f':""" # for loop
-	for %s in %s:
-		print(%s)
+		for %s in %s:
+			print(%s)
 		""",
-		's':""" # sequence while loop
+	's':""" # sequence while loop
 		%s = 0
 		%s = %s
 		while %s < len(%s):
 			print(%s[%s])
 			%s = %s + 1
 		""",
-		'n':""" # counting while loop
+	'n':""" # counting while loop
 		%s = %d
 		while %s < %d:
 			print(%s)
