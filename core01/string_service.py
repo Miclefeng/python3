@@ -11,7 +11,11 @@ define("port",default=8080,help="run on the given port",type=int)
 class ReverseHandler(tornado.web.RequestHandler):
 	def get(self,input):
 		# reverse string
-		self.write(input[::-1]+"\n")
+		headers = self.request.headers
+		for k,v in headers.items():
+			self.write(k+" => "+v+"\n")
+		self.write(input+"\n")
+
 
 class WrapHandler(tornado.web.RequestHandler):
 	def post(self):
