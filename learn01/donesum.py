@@ -1,12 +1,12 @@
 #donesum.py 
-from _ast import Num
-total = 0
-s = input('Enter a number (or "done"): ').strip()
-while s != 'done' :
-    num = int(s)
-    total = total + num 
-    s = input('Enter a number (or "done"): ')
-print('The sum is '+ str(total))
+#from _ast import Num
+#total = 0
+#s = input('Enter a number (or "done"): ').strip()
+#while s != 'done' :
+#    num = int(s)
+#    total = total + num 
+#    s = input('Enter a number (or "done"): ')
+#print('The sum is '+ str(total))
 
 #donesumbreak.py 
 
