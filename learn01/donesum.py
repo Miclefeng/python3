@@ -1,4 +1,6 @@
 # donesum.py
+#from _ast import Num
+
 total = 0
 s = input('Enter a number (or "done"): ').strip()
 while s != 'done':
