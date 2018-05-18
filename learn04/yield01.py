@@ -15,18 +15,25 @@ def gen():
 		print(x)
 
 g = gen()
+print('\n')
 print(next(g))
+print('\n')
 print(g.send(1))
+print('\n')
 print(g.send(2))
+print('\n')
 print(next(g))
+print('\n')
 print(next(g))
+print('\n')
 print(next(g))
+print('\n')
 
 for num in (x ** 2 for x in range(4)):
-	print('%s , %s' % (num,num/2))
+	print('%d , %s' % (num,num/2))
+print('\n')
 
 l = (x ** 2 for x in range(4))
-print(next(l))
 print(next(l))
 print(next(l))
 print(next(l))
