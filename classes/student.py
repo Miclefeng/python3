@@ -23,7 +23,7 @@ class Student():
         self.__score = score
         print(self.name + '同学的本次考试分数为：' + str(self.__score))
 
-    # 装饰器，让方法成为类方法
+    # 装饰器，让方法成为类方法，与 PHP 静态方法类似
     @classmethod
     def plus_sum(cls):
         cls.sum1 += 1
@@ -69,7 +69,7 @@ student.marking(66)
 student.__score = 20
 print(student.__score)
 print(student.__dict__)
-# student2未设置，调用内部私有变量报错
+# student2未设置__score，调用内部私有变量报错
 # print(student2.__score)
 print(student2.__dict__)
 # 读取内部私有变量
