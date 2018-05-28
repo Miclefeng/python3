@@ -4,8 +4,6 @@ python
 python
 python
 python
-python
-python
 spam
 spam
 SPAM!
