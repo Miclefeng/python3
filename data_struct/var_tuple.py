@@ -33,7 +33,7 @@ def sum(items):
     #    return head + sum(tail)
     #else:
     #    return head
-    #return head + sum(tail) if tail else head
+    return head + sum(tail) if tail else head
 print(sum(items))
 
 total = reduce(lambda x, y: x + y, items)
