@@ -49,7 +49,6 @@ class Spider():
 
     @staticmethod
     def __show(anchors):
-
         for i in range(0, len(anchors)):
             print(
                 'Rank' + str(i + 1)
