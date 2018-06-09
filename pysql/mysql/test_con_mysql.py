@@ -6,5 +6,9 @@
 #=============================================================
 # coding:utf8
 import pymysql
-from pysql.db_conf import *
+
+
+
+
+
 
