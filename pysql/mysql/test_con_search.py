@@ -44,7 +44,8 @@ class MysqlSearch():
 
 def main():
     obj = MysqlSearch()
-    obj.get_one()
+    res = obj.get_one()
+    print(res)
 
 if __name__ == '__main__':
     main()
