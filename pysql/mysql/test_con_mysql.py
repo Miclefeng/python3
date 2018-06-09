@@ -8,5 +8,3 @@
 import pymysql
 from pysql.db_conf import *
 
-
-print(HOST)
