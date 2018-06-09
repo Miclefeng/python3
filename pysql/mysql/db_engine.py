@@ -25,7 +25,7 @@ news = Table('news', metadata,
              Column('author', String(24), nullable=False, default=''),
              Column('view_count', Integer, default=0),
              Column('created_at', Integer, default=0),
-             Column('id_valid', SmallInteger, default=1))
+             Column('is_valid', SmallInteger, default=1))
 
 if __name__ == '__main__':
     metadata.create_all()
