@@ -15,6 +15,7 @@ conn = pymysql.connect(
             user = config.USER,
             password = config.PASSWD,
             database = config.DB,
+            charset = 'utf8',
             cursorclass = pymysql.cursors.DictCursor)
 
 # 获取游标
