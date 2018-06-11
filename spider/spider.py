@@ -63,6 +63,9 @@ class Spider():
         anchors = self.__sort(anchors)
         self.__show(anchors)
 
+def main():
+    spider = Spider()
+    spider.go()
 
-spider = Spider()
-spider.go()
+if __name__ == '__main__':
+    main()
