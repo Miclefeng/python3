@@ -31,3 +31,33 @@ print(next(c))
 print(next(c))
 print(next(c))
 print(next(c, None))
+
+class CountDown:
+    def __init__(self, start):
+        self.start = start
+
+    def __iter__(self):
+        n = self.start
+        while n > 0:
+            yield n
+            n -= 1
+
+    # 反向迭代
+    # 反向迭代仅仅当对象的大小可预先确定或者对象实现了 __reversed__() 的特殊方法时才能生效
+    def __reversed__(self):
+        n = 1
+        while n <= self.start:
+            yield n
+            n += 1
+
+for rr in reversed(CountDown(10)):
+    print(rr)
+print('\n-------------')
+for rr in CountDown(10):
+    print(rr)
+
+
+
+
+
+
