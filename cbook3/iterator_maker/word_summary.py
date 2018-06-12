@@ -6,6 +6,7 @@
 #=============================================================
 # coding:utf8
 from collections import defaultdict
+from itertools import zip_longest
 
 
 word_summary = defaultdict(list)
@@ -18,3 +19,11 @@ for idx, line in enumerate(lines):
         word_summary[word].append(idx)
 
 print(dict(word_summary))
+
+print('\n---------')
+a = [1, 2, 3]
+b = ['w', 'x', 'y', 'z']
+# zip() 会创建一个迭代器来作为结果返回。
+# 如果你需要将结对的值存储在列表中，要使用 list() 函数
+for i in zip_longest(a, b, fillvalue=0):
+    print(i)
