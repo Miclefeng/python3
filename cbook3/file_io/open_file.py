@@ -11,3 +11,13 @@ with open('somefile.txt', 'rt') as f:
     # print(data)
     for line in f:
         print(line)
+
+with open('somefile.txt', 'wt') as f:
+    f.write('golang\n')
+    f.write('beengo\n')
+
+# 将 print() 函数的输出重定向到一个文件中去
+with open('somefile.txt', 'wt') as f:
+    print('python', file=f)
+    print('flask', file=f)
+    print('scrapy', file=f)
