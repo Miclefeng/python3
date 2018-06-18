@@ -15,7 +15,6 @@ engine = create_engine('mysql://' + config.USER + ':' + config.PASSWD + '@'
         + config.HOST + ':' + config.PORT  + '/' + config.DB)
 Base = declarative_base()
 
-print(engine)
 
 class News(Base):
     __tablename__ = 'news'
