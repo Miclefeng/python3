@@ -36,7 +36,7 @@ RECORD_SIZE = 32
 with open('data.bin', 'rb') as f:
     # iter()如果你给它传递一个可调用对象和一个标记值，它会创建一个迭代器。
     # 这个迭代器会一直调用传入的可调用对象直到它返回标记值为止，这时候迭代终止
-    # unctools.partial 用来创建一个每次被调用时从文件中读取固定数目字节的可调用对象。 标记值 b''
+    # functools.partial 用来创建一个每次被调用时从文件中读取固定数目字节的可调用对象。 标记值 b''
     # 就是当到达文件结尾时的返回值
     records = iter(partial(f.read, RECORD_SIZE), b'')
     for r in records:
