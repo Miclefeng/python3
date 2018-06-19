@@ -1,2 +1,4 @@
 pysql/mysql/db_conf.py
+.idea
+.idea/*
 
