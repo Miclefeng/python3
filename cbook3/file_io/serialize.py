@@ -8,6 +8,8 @@
 import pickle
 
 
+# pickle在加载时有一个副作用就是它会自动加载相应模块并构造实例对象。
+# 创建一个恶意的数据导致Python执行随意指定的系统命令。
 f = open('somedata', 'wb')
 pickle.dump([1, 2, 3, 4, 5], f)
 pickle.dump('hello', f)
