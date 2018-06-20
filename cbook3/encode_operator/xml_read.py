@@ -12,6 +12,7 @@ from xml.etree.ElementTree import parse
 u = urlopen('https://m.huanqiu.com/rss')
 doc = parse(u)
 
+i = 0
 for item in doc.iterfind('channel/item'):
     title = item.findtext('title')
     date = item.findtext('pubDate')
@@ -19,4 +20,6 @@ for item in doc.iterfind('channel/item'):
     print(title)
     print(date)
     print(link)
+    i += 1
+    print(i)
     print()
