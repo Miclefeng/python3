@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='us-ascii'?>
+<stop>
+    <id>14791</id>
+    <nm>Clark&amp;Balmoral</nm>
+    <spam>Miclefeng zss</spam><sri>
+        <rt>22</rt>
+        <d>NorthBound</d>
+        <dd>NorthBound</dd>
+    </sri>
+    <pre>
+        <pt>5MIN</pt>
+        <fd>Howard</fd>
+        <v>1378</v>
+        <rn>22</rn>
+    </pre>
+    <pre>
+        <pt>15MIN</pt>
+        <fd>Howard</fd>
+        <v>1867</v>
+        <rn>22</rn>
+    </pre>
+</stop>
