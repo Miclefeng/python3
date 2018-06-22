@@ -8,6 +8,7 @@ mysql-python = "*"
 pymysql = "*"
 pytz = "*"
 sqlalchemy = "*"
+pymongo = "*"
 
 [dev-packages]
 
