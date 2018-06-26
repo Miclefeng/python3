@@ -1,5 +1,5 @@
 [[source]]
-url = "https://pypi.org/simple"
+url = "https://pypi.douban.com/simple"
 verify_ssl = true
 name = "pypi"
 
@@ -9,6 +9,9 @@ pymysql = "*"
 pytz = "*"
 sqlalchemy = "*"
 pymongo = "*"
+redis = "*"
+requests = "*"
+scrapy = "*"
 
 [dev-packages]
 
