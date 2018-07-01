@@ -32,3 +32,8 @@ class D(B, C):
 if __name__ == '__main__':
     print(D.__mro__)
     d = D()
+
+# mixin模式特点：
+# 1、mixin类功能单一
+# 2、不和基类关联，可以和任意基类组合，基类可以不和mixin关联就能初始化
+# 3、在mixin中不要使用super()
