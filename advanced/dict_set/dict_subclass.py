@@ -33,5 +33,3 @@ print(my_dict)
 
 my_dict = defaultdict(dict)
 my_value = my_dict['aquarius']
-
-
