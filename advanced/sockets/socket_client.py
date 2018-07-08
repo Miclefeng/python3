@@ -6,7 +6,7 @@ client.connect(('127.0.0.1', 8000))
 
 while True:
     send_data = input()
-    client.send('miclefeng'.encode('utf8'))
+    client.send(send_data.encode('utf8'))
     data = client.recv(1024)
     print(data.decode('utf8'))
-# client.close()
+# client.closeI`
