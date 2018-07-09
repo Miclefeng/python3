@@ -29,7 +29,12 @@ print('\n-----------')
 
 # *args 是tuple，**kwargs 是dict
 def make_element(name, value, **attrs):
+    # item 是一个tuple，就可以进行拆解
     keyvals = [' %s="%s"' % item for item in attrs.items()]
+
+    # for item in attrs.items():
+    #     print(item)
+
     attr_str = ''.join(keyvals)
     element = '<{name}{attrs}>{value}</{name}>'.format(
             name=name,
