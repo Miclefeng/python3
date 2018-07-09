@@ -37,7 +37,7 @@ def main():
     #         thread.start_new_thread(loop, (i, loops[i], locks[i]))
 
     for i in nloops:
-        # 如果获取了锁对象返回True，等待锁对象释放
+        # 如果获取了锁对象返回True，阻塞主线程，等待子线程完成，释放锁对象
         while locks[i].locked():
             pass
     print('all DONE at: ', ctime())
