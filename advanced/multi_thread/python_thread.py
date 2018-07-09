@@ -28,7 +28,7 @@ if __name__ == '__main__':
     thread1.start()
     thread2.start()
 
-    # 阻塞线程直到线程完成
+    # 阻塞主线程直到子线程完成
     thread1.join()
     thread2.join()
     # 当主线程退出时，子线程kill掉
