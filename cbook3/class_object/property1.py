@@ -1,7 +1,7 @@
 
 class Person:
     def __init__(self, first_name):
-        self._first_name = first_name
+        self.first_name = first_name
 
     @property
     def first_name(self):
@@ -19,8 +19,8 @@ class Person:
 
 
 if __name__ == '__main__':
-    a = Person('miclefeng')
+    a = Person('Miclefeng')
     print(a.first_name)
-    a.first_name = 'striveftf'
+    a.first_name = 'StriveFTF'
     print(a.first_name)
-    del a.first_name
+    # del a.first_name
