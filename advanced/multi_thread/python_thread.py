@@ -23,6 +23,7 @@ if __name__ == '__main__':
     thread1 = threading.Thread(target=get_detail_html, args=('', ))
     thread2 = threading.Thread(target=get_detail_url, args=('', ))
     start_time = time.time()
+    # 设置为守护线程，表示这个线程是不重要的，进程退出时不需要等待这个线程
     thread1.setDaemon(True)
     thread2.setDaemon(True)
     thread1.start()
