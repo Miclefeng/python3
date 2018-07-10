@@ -27,7 +27,7 @@ class PriorityQueue:
         return heapq.heappop(cls._queue)[-1]
 
     def getQueue(self):
-        print(self._queue)
+        print(sorted(self._queue))
 
 class Item:
     def __init__(self, name):
