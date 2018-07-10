@@ -10,8 +10,11 @@ def myreadlines(f, newline):
     buf = ''
     while True:
         while newline in buf:
+            # 获取 newline 分割的位置
             pos = buf.index(newline)
+            # 返回每次chunk第一个位置的字符串
             yield buf[:pos]
+            # 过滤掉前一个 和 newline
             buf = buf[pos + len(newline):]
         chunk = f.read(4096)
 

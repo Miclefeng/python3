@@ -12,6 +12,7 @@ pymongo = "*"
 redis = "*"
 requests = "*"
 scrapy = "*"
+notebook = "*"
 
 [dev-packages]
 
