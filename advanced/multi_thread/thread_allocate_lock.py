@@ -31,10 +31,10 @@ def main():
         lock.acquire()
         locks.append(lock)
         # 启动一个新的线程
-        thread.start_new_thread(loop, (i, loops[i], locks[i]))
+        # thread.start_new_thread(loop, (i, loops[i], locks[i]))
 
-    #     for i in nloops:
-    #         thread.start_new_thread(loop, (i, loops[i], locks[i]))
+    for i in nloops:
+        thread.start_new_thread(loop, (i, loops[i], locks[i]))
 
     for i in nloops:
         # 如果获取了锁对象返回True，阻塞主线程，等待子线程完成，释放锁对象
