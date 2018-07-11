@@ -5,8 +5,8 @@
 # Created Time: 2018/7/10 21:59
 #=============================================================
 # coding:utf8
-import sys
-sys.path.extend(['python3'])
+# import sys
+# sys.path.extend(['python3'])
 from advanced.multi_thread.threading_thread2 import MyThread
 from time import ctime, sleep
 
