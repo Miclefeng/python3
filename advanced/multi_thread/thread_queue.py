@@ -11,11 +11,12 @@ from queue import Queue
 
 def get_detail_html(queue):
     # 抓取文章详情页
-    url = queue.get(1)
-    print('get detail html started')
-    time.sleep(2)
-    print(url)
-    print('get detail html end')
+    while True:
+        url = queue.get(1)
+        print('get detail html started')
+        time.sleep(2)
+        print(url)
+        print('get detail html end')
 
 
 def get_detail_url(queue):
@@ -32,16 +33,16 @@ if __name__ == '__main__':
 
     start_time = time.time()
     threads = []
-    for i in range(21):
+    for i in range(4):
         t = threading.Thread(target=get_detail_html, args=(detail_url_queue, ))
         threads.append(t)
 
     url_thread.start()
-    for i in range(21):
+    for i in range(4):
         threads[i].start()
 
     url_thread.join()
-    for i in range(21):
+    for i in range(4):
         threads[i].join()
 
 
