@@ -49,7 +49,7 @@ def main():
 
     # 在with condition之后才是调用wait和notify方法
     # condition有两层锁，一把是底层锁会在线程调用wait时释放
-    # wait在添加一把心锁到deque，notify释放deque中wait添加的锁
+    # wait添加一把锁到deque，notify释放deque中wait添加的锁
     xiaoai.start()
     tianmao.start()
 
