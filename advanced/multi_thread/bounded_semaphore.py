@@ -30,15 +30,15 @@ def refill():
     lock.release()
 
 def buy():
-    lock.acquire()
-    print('Buying candytray')
-    # 释放信号量的计数器资源
-    if candytray.acquire(False):
-        print('Ok')
-    else:
-        print('Empty, skipping')
-    print('Buy candytray len: ', candytray.__dict__['_value'])
-    lock.release()
+    # lock 支持上下文协议
+    with lock:
+        print('Buying candytray')
+        # 释放信号量的计数器资源
+        if candytray.acquire(False):
+            print('Ok')
+        else:
+            print('Empty, skipping')
+        print('Buy candytray len: ', candytray.__dict__['_value'])
 
 def producer(loops):
     for x in range(loops):
