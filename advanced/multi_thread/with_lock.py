@@ -21,10 +21,12 @@ remaining = CleanOutputSet()
 
 def loop(nsec):
     myname = current_thread().name
+
     with lock:
         remaining.add(myname)
         print('[{:s}] Started {:s}'.format(ctime(), myname))
     sleep(nsec)
+
     with lock:
         remaining.remove(myname)
         print('[{:s}] Completed {:s} ({:d} secs)'.format(ctime(), myname, nsec))
