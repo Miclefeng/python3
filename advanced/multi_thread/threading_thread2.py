@@ -11,9 +11,10 @@ from time import ctime, sleep
 
 loops = [4, 2]
 
+
 class MyThread(threading.Thread):
     def __init__(self, func, args, name=''):
-        threading.Thread.__init__(self)
+        super().__init__()
         self.name = name
         self.func = func
         self.args = args
@@ -26,10 +27,12 @@ class MyThread(threading.Thread):
         self.res = self.func(*self.args)
         print(self.name, ' finished at: ', ctime())
 
+
 def loop(nloop, nsec):
     print('start loop ', nloop, ' at: ', ctime())
     sleep(nsec)
     print('loop', nloop, ' done at: ', ctime())
+
 
 def main():
     print('starting at: ', ctime())
@@ -48,6 +51,7 @@ def main():
         threads[i].join()
 
     print('all DONE at: ', ctime())
+
 
 if __name__ == '__main__':
     main()

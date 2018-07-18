@@ -18,7 +18,6 @@ def get_detail_html(queue):
         print(url)
         print('get detail html end')
 
-
 def get_detail_url(queue):
     # 爬取文章列表页
     print('get detail url started')
