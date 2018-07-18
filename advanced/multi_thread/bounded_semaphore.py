@@ -26,7 +26,7 @@ def refill():
         print('Full, skipping')
     else:
         print('Ok')
-    print('Refill candytray len: ', candytray.__dict__['_value'])
+    # print('Refill candytray len: ', candytray.__dict__['_value'])
     lock.release()
 
 def buy():
@@ -38,7 +38,7 @@ def buy():
             print('Ok')
         else:
             print('Empty, skipping')
-        print('Buy candytray len: ', candytray.__dict__['_value'])
+        # print('Buy candytray len: ', candytray.__dict__['_value'])
 
 def producer(loops):
     for x in range(loops):
