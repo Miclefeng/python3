@@ -1,39 +1,48 @@
-# numnote.py 
-def numnote(lst):
-    msg = []
-    for num in lst :
-        if num < 0:
-            s = str(num) + ' is negative'
-        elif 0 <= num <=9:
-            s = str(num)+ ' is a digit'
-        else :
-            return msg
-        msg.append(s)
-    return msg
-print(numnote([1,5,-3,22]))
+class ListNode:
+    def __init__(self, x):
+        self.val = x
+        self.index = 0
+        self.next = None
 
-for msg in numnote([1,5,-6,22]): print(msg)
-print('\n'.join(numnote([1,5,-6,22])))
-lst = []
-lst.extend('cat')
-print(lst)
-lst.extend([1,5,-3])
-print(lst)
-lst = ['a','b','c','d']
-lst.pop(2)
-print(lst)
-lst.pop()
-print(lst)
-lst = ['a','b','c','a']
-lst.remove('a')
-print(lst)
-lst = ['a','b','c','d']
-lst.reverse()
-print(lst)
+    def __next__(self):
+        try:
+            self.next = self.val[self.index]
+            self.index += 1
+        except:
+            self.next = 0
+        print(self.next)
+        return self.next
 
-print([n*n for n in range(1,11)])
+    def __reversed__(self):
+        return reversed(self.val)
 
-result = []
-for n in range(1,11):
-    result.append(n*n)
-print(result)
+
+class Solution:
+    def addTwoNumbers(self, l1, l2):
+        """
+        :type l1: ListNode
+        :type l2: ListNode
+        :rtype: ListNode
+        """
+        res = []
+        carry_bit = 0
+        while True:
+            fn = next(l1, 0)
+            sn = next(l2, 0)
+            if fn == 0 and sn == 0:
+                break
+            else:
+                if fn + sn + carry_bit >= 10:
+                    res.append(fn + sn + carry_bit - 10)
+                    carry_bit = 1
+                else:
+                    res.append(fn + sn + carry_bit)
+                    carry_bit = 0
+        if carry_bit > 0:
+            res.append(carry_bit)
+        return res
+
+solution = Solution()
+l1 = ListNode([2, 3, 4])
+l2 = ListNode([4, 5, 7])
+print(solution.addTwoNumbers(reversed(l1), reversed(l2)))
