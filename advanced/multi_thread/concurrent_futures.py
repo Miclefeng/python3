@@ -5,8 +5,12 @@
 # Created Time: 2018/7/15 13:02
 #=============================================================
 # coding:utf8
-from concurrent.futures import ThreadPoolExecutor, as_completed, wait, FIRST_COMPLETED
+from concurrent.futures import ThreadPoolExecutor, as_completed, wait, FIRST_COMPLETED, Future
 from time import ctime, sleep
+
+
+# Future 未来对象，task的返回容器
+
 
 
 # 线程池
