@@ -11,6 +11,7 @@ from time import ctime, sleep
 
 def main():
     pid = os.fork()
+    # fork copy当前进程，所以会打印两边
     print('miclefeng')
 
     if pid == 0:
