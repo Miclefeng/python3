@@ -3,6 +3,9 @@
 import redis
 import threading
 
+# 全局变量locks就是一个ThreadLocal对象，每个Thread对它都可以读写redis属性，但互不影响。
+# 你可以把locks看成全局变量，但每个属性如local_school.redis都是线程的局部变量，使得每个线程之间的变量可以任意读写而互不干扰
+# ThreadLocal最常用的地方就是为每个线程绑定一个数据库连接，HTTP请求，用户身份信息等，这样一个线程的所有调用到的处理函数都可以非常方便地访问这些资源。
 
 locks = threading.local()
 locks.redis = {}
