@@ -12,6 +12,7 @@ from time import ctime, sleep
 def main():
     pid = os.fork()
     # fork copy当前进程，所以会打印两边
+    # fork 会把进程中的变量copy一份，无法使用全局变量进行通信
     print('miclefeng')
 
     if pid == 0:
