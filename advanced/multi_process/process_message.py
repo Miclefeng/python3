@@ -27,19 +27,33 @@ def consumer(pipe):
     data = pipe.recv()
     print(data)
 
+def add_data(p_dict, key, value):
+    p_dict[key] = value
+
 def main():
     # 使用Queue进行进程通信
     # 共享全局变量不能适用多进程编程，可适用于多线程
-    queue = Queue(10)
-    my_producer = Process(target=producer, args=(queue, ))
-    my_consumer = Process(target=consumer, args=(queue, ))
-    my_producer.start()
-    my_consumer.start()
-    my_producer.join()
-    my_consumer.join()
+    # queue = Queue(10)
+    # my_producer = Process(target=producer, args=(queue, ))
+    # my_consumer = Process(target=consumer, args=(queue, ))
+    # my_producer.start()
+    # my_consumer.start()
+    # my_producer.join()
+    # my_consumer.join()
+
+    progress_dict = Manager().dict()
+
+    first = Process(target=add_data, args=(progress_dict, 'miclefeng', 26))
+    second = Process(target=add_data, args=(progress_dict, 'striveftf', 26))
+    first.start()
+    second.start()
+    first.join()
+    second.join()
+    print(progress_dict)
+
 
 if __name__ == '__main__':
-    # main()
+    main()
     # Queue 无法用于进程池pool建立的进程通信
     # 使用Manager中的queue进行通信
     # queue = Manager().Queue(10)
@@ -50,11 +64,11 @@ if __name__ == '__main__':
     # pool.join()
 
     # 通过pipe进行进程间通信
-    # pipe只能适用于两个进程间的通信
-    receive_pipe, send_pipe = Pipe()
-    my_producer = Process(target=producer, args=(send_pipe, ))
-    my_consumer = Process(target=consumer, args=(receive_pipe, ))
-    my_producer.start()
-    my_consumer.start()
-    my_producer.join()
-    my_consumer.join()
+    # pipe只能适用于两个进程间的通信,pipe性能高于pipe
+    # receive_pipe, send_pipe = Pipe()
+    # my_producer = Process(target=producer, args=(send_pipe, ))
+    # my_consumer = Process(target=consumer, args=(receive_pipe, ))
+    # my_producer.start()
+    # my_consumer.start()
+    # my_producer.join()
+    # my_consumer.join()
