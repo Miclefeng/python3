@@ -44,4 +44,4 @@ def is_action_allowed(user_id, action_key, capacity, leaking_rate):
 
 if __name__ == '__main__':
     for i in range(20):
-        print(is_action_allowed('miclefeng', 'striveftf', 15, 0.5))
+        print(is_action_allowed('miclefeng', 'striveftf', 15, 0.5), time.ctime())
