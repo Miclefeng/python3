@@ -24,7 +24,7 @@ print(hasattr(com, '__len__'))
 print(isinstance(com, Sized))
 
 # 2、强制某个子类必须实现某些方法
-# example：实现一个web框架，集成cache(redis, cache, file)
+# example：实现一个web框架，集成cache(sturedis, cache, file)
 # 需要设计一个抽象基类，指定子类必须实现某些方法
 
 
