@@ -1,6 +1,6 @@
 # -*- coding: utf-8
 import time
-import redis
+# import redis
 
 
 funnels = {}
