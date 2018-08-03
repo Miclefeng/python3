@@ -15,7 +15,7 @@ class Funnel:
     def make_space(self):
         now_ts = time.time()
         delta_ts = now_ts - self.leaking_ts # 距离上一次漏水过去多久
-        delta_quota = delta_ts * self.leaking_ts # 漏水腾出多少空间
+        delta_quota = delta_ts * self.leaking_rate # 漏水腾出多少空间
         if delta_quota < 1:
             return False
 
