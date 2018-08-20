@@ -18,8 +18,10 @@ def is_action_allowed(user_id, action_key, period, max_count):
 
     # 查询当前窗口的数据大小
     current_count = client.zcard(key)
+    if current_count is 0:
+        current_count = 1
 
-    if (current_count > max_count):
+    if current_count > max_count:
         client.delete(key + '_lock')
         return False
 
