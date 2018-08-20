@@ -28,6 +28,7 @@ class Funnel:
 
     def watering(self, quota):
         self.make_space()
+        # 单次需要的空间
         if self.left_quota >= quota:
             # 校验漏斗的剩余空间
             self.left_quota -= quota
